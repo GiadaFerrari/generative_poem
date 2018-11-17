@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    text-transform: capitalize;
+}
+
+
+main {
+    margin: 15px;
+}
+
+button {
+    padding: 5px;
+    margin: 15px;
+    text-align: center;
+}
