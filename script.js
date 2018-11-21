@@ -65,7 +65,6 @@ function fillArray(data, type) {
             pushToArray(a, adjs)
 
         )
-        //  fillTemplate(templateDark);
 
     } else if (type == 'verb') {
         data.forEach(v => {
