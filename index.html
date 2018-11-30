@@ -16,11 +16,16 @@
 
 <body>
     <h1><span class="coldB"></span></h1>
-    <button class="newPoem">NEW POEM</button>
-
 
     <!-- add an input field where each person can put their name , last name and choose a color from scroll down menu  -->
     <main>
+        <div class="form">
+            First Name: <input class="name" type="text" placeholder="Your Name">;<br> Last Name: <input class="lastName" type="text" placeholder="Your Last Name">;<br> Favorite Color: <input class="color" type="color" placeholder="Your Favorite Color">;<br> Your Birthday: <input class="bday" type="date" placeholder="Your Birthday">;<br>
+            <input class="newPoem" type="submit" name="New Poem">
+
+        </div>
+        <div class="modal hide"><button>X</button></div>
+
     </main>
 
 
@@ -42,53 +47,22 @@
         </article>
     </template>
 
-    <template class="pink">
-        <article class="poem">
-            <h2 class="title"><span class="adj"></span> <span class="bird"></span></h2>
-
-            <p class="strofa">
-            I  <span class="infinite">INFINITE</span> <span class="bird">  ANTARCTIC BIRD  </span>
-            <span class="gerund">GERUND</span> <span class="food"> FOOD </span>,<br>
-            their <span class="adj">ADJ</span> beaks,<br>
-            their <span class="adj">ADJ</span> wings,<br>
-            Oh my, their reflections on the <span class="river">RIVER</span>,<br>
-            how <span class="adj"></span>!</p>
+    <template class="albatros">
+    <section>
+    <p class="poem">
+        Nor dim nor red, like God's own head, <br>
+The glorious Sun uprist: <br>
+Then all averred, I had killed the bird
+That brought the fog and mist. <br>
+'Twas right, said they, such birds to slay, <br>
+        That bring the fog and mist. </p>
 
 
-        </article>
+
+
+    </section>
     </template>
 
-    <template class="red">
-        <article class="poem">
-            <h2 class="title"><span class="adj"></span> <span class="bird"></span></h2>
-
-            <p class="strofa">
-            I  <span class="infinite">INFINITE</span> <span class="bird">  ANTARCTIC BIRD  </span>
-            <span class="gerund">GERUND</span> <span class="food"> FOOD </span>,<br>
-            their <span class="adj">ADJ</span> beaks,<br>
-            their <span class="adj">ADJ</span> wings,<br>
-            Oh my, their reflections on the <span class="river">RIVER</span>,<br>
-            how <span class="adj"></span>!</p>
-
-
-        </article>
-    </template>
-
-    <template class="white">
-        <article class="poem">
-            <h2 class="title"><span class="adj"></span> <span class="bird"></span></h2>
-
-            <p class="strofa">
-            I  <span class="infinite">INFINITE</span> <span class="bird">  ANTARCTIC BIRD  </span>
-            <span class="gerund">GERUND</span> <span class="food"> FOOD </span>,<br>
-            their <span class="adj">ADJ</span> beaks,<br>
-            their <span class="adj">ADJ</span> wings,<br>
-            Oh my, their reflections on the <span class="river">RIVER</span>,<br>
-            how <span class="adj"></span>!</p>
-
-
-        </article>
-    </template>
 
 
     <script src="script.js"></script>

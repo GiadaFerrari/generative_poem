@@ -16,4 +16,31 @@ button {
     padding: 5px;
     margin: 15px;
     text-align: center;
+    cursor: pointer;
+
+}
+
+.hide {
+    display: none;
+}
+
+
+/*modal*/
+
+.modal {
+    background-color: (255, 255, 255, .8);
+    width: 80vw;
+    padding: 5vw;
+    margin: 10vw;
+    font-family: cursive;
+    color: #707070;
+    position: relative;
+
+}
+
+.modal button {
+    position: absolute;
+    padding: 20px;
+    font-weight: bold;
+
 }

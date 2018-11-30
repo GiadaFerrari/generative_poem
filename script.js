@@ -1,5 +1,6 @@
-let main = document.querySelector('main');
-let button = document.querySelector('.newPoem');
+let main = document.querySelector('.modal');
+let submitButton = document.querySelector('.newPoem');
+
 
 /*API URL*/
 const coldBirdsAPI = "https://raw.githubusercontent.com/dariusk/corpora/master/data/animals/birds_antarctica.json";
@@ -124,4 +125,7 @@ function fillTemplate(template) {
 
 }
 
-button.addEventListener('click', () => fillTemplate(templateDark))
+submitButton.addEventListener('click', () => {
+    main.classList.toggle('hide')
+    fillTemplate(templateDark)
+})
