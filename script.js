@@ -3,6 +3,7 @@ let submitButton = document.querySelector('.newPoem');
 
 
 /*API URL*/
+/*
 const coldBirdsAPI = "https://raw.githubusercontent.com/dariusk/corpora/master/data/animals/birds_antarctica.json";
 const veggieAPI = "https://raw.githubusercontent.com/dariusk/corpora/master/data/foods/vegetables.json";
 const riverAPI = "https://raw.githubusercontent.com/dariusk/corpora/master/data/geography/rivers.json";
@@ -12,6 +13,7 @@ const verbAPI = "https://raw.githubusercontent.com/dariusk/corpora/master/data/w
 
 
 /*arrays*/
+/*
 
 let birds = [];
 let food = [];
@@ -21,6 +23,7 @@ let gerund = [];
 let adjs = [];
 
 /*setup*/
+/*
 
 function setup() {
     fetchEvents(coldBirdsAPI, 'birdy');
@@ -35,6 +38,7 @@ function setup() {
 }
 
 /*fetch*/
+/*
 function fetchEvents(API, kind) {
 
     fetch(API).then(result => result.json()).then(data => fillArray(data, kind));
@@ -83,7 +87,7 @@ function pushToArray(el, array) {
 
 
 /*TEMPLATES*/
-
+/*
 const templateDark = document.querySelector('template.dark').content;
 
 
@@ -128,4 +132,4 @@ function fillTemplate(template) {
 submitButton.addEventListener('click', () => {
     main.classList.toggle('hide')
     fillTemplate(templateDark)
-})
+})*/
