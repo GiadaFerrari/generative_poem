@@ -14,15 +14,13 @@ let rhyme = [];
 
 function processData() {
     myInput = [];
+    main.innerHTML = " "
 
 
     inputs.forEach(i => {
         myInput.push(i.value);
-        console.log(i.value)
 
     });
-
-
 
     fetch("poems.json").then(result => result.json()).then(data => selectTemplate(data, myInput));
 }
@@ -36,15 +34,15 @@ function selectTemplate(template, userData) {
     clr = userData[2].substring(1, 7);
     bday = userData[3].substring(8, 10);
 
-    if (bday < 5) {
+    if (bday < 6) {
         myTemplate = template[0]
 
-    } else if (5 < bday < 10) {
+    } else if (5 < bday && bday < 10) {
         myTemplate = template[1]
-    } else if (10 < bday < 15) {
+    } else if (10 < bday && bday < 15) {
         myTemplate = template[2]
 
-    } else if (15 < bday < 20) {
+    } else if (15 < bday && bday < 20) {
         myTemplate = template[3]
 
     } else if (bday > 20) {
@@ -52,8 +50,6 @@ function selectTemplate(template, userData) {
 
     }
 
-    console.log(bday.substring(4, 5))
-    console.log(name.substring(0, 1))
 
     if (clr.indexOf(bday.substring(1, 2)) > -1) {
         myP = myTemplate.poems[0];
@@ -61,6 +57,8 @@ function selectTemplate(template, userData) {
         myP = myTemplate.poems[1];
     } else if (name.indexOf(name.subsring(0 - 1)) > -1) {
         myP = myTemplate.poems[2]
+    } else {
+        myP = myTemplate.poems[3]
     }
 
     if (name.length > lname.length) {
@@ -98,8 +96,19 @@ function applyRita(name) {
             output += 'br'
         } else if (rsWords[i] == '>') {
             output += '>'
-        } else if (rsPos[i] == "nn") {
+        } else if (rsPos[i] == "nn" && rhyme.length > 4) {
             newWord = rhyme[myIndex(rhyme.length)]
+
+            output += newWord;
+            output += " ";
+        } else if (rsPos[i] == "nn") {
+            newWord = lexicon.randomWord('nn');
+
+            output += newWord;
+            output += " ";
+
+        } else if (rsPos[i] == "nnp") {
+            newWord = lexicon.randomWord('nnp');
 
             output += newWord;
             output += " ";
