@@ -96,7 +96,7 @@ function applyRita(name) {
             output += 'br'
         } else if (rsWords[i] == '>') {
             output += '>'
-        } else if (rsPos[i] == "nn" && rhyme.length > 4) {
+        } else if (rsWords[i - 1] == "<") {
             newWord = rhyme[myIndex(rhyme.length)]
 
             output += newWord;
