@@ -3,9 +3,11 @@ let main = document.querySelector('.modal section');
 let submitButton = document.querySelector('.newPoem');
 let inputs = document.querySelectorAll('input');
 let myInput = [];
-let bday, clr, myTemplate, name, myP;
+let bday, clr, myTemplate, name, myP, n;
 let output = " ";
 let lexicon = new RiLexicon();
+let rhyme = [];
+
 
 
 
@@ -30,27 +32,54 @@ function processData() {
 
 function selectTemplate(template, userData) {
     name = userData[0];
+    lname = userData[1]
     clr = userData[2].substring(1, 7);
     bday = userData[3].substring(8, 10);
 
-    if (bday > 15) {
+    if (bday < 5) {
         myTemplate = template[0]
 
-    } else {
+    } else if (5 < bday < 10) {
         myTemplate = template[1]
+    } else if (10 < bday < 15) {
+        myTemplate = template[2]
+
+    } else if (15 < bday < 20) {
+        myTemplate = template[3]
+
+    } else if (bday > 20) {
+        myTemplate = template[4]
+
     }
-    console.log(bday.substring(1, 2))
+
+    console.log(bday.substring(4, 5))
+    console.log(name.substring(0, 1))
 
     if (clr.indexOf(bday.substring(1, 2)) > -1) {
-        myP = myTemplate.poems[1];
-    } else {
         myP = myTemplate.poems[0];
+    } else if (clr.indexOf(bday.substring(4, 5)) > -1) {
+        myP = myTemplate.poems[1];
+    } else if (name.indexOf(name.subsring(0 - 1)) > -1) {
+        myP = myTemplate.poems[2]
     }
-    applyRita();
+
+    if (name.length > lname.length) {
+        n = name
+    } else {
+        n = lname
+    }
+    console.log(n)
+    applyRita(n);
 
 };
 
-function applyRita() {
+function applyRita(name) {
+    let myIndex = (max) => {
+        let min = 0;
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+
+        //solution inspired byhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+    }
     let rs = new RiString(myP);
     let rsWords = rs.words();
     let rsPos = rs.pos();
@@ -58,7 +87,11 @@ function applyRita() {
     console.log(rsPos);
     console.log(rsWords);
 
+    rhyme = lexicon.similarBySound(name);
+
     for (i = 0; i < rsWords.length; i++) {
+
+        rsWords[0].toUpperCase();
         if (rsWords[i] == "<") {
             output += '<'
         } else if (rsWords[i] == 'br') {
@@ -66,7 +99,7 @@ function applyRita() {
         } else if (rsWords[i] == '>') {
             output += '>'
         } else if (rsPos[i] == "nn") {
-            newWord = lexicon.randomWord("nn")
+            newWord = rhyme[myIndex(rhyme.length)]
 
             output += newWord;
             output += " ";

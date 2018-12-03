@@ -7,13 +7,23 @@
     {
         "author": "Milton",
         "poems": ["In search of this new world, whom shall we find Sufficient? who shall tempt with wandring feet <br>The dark unbottom'd infinite Abyss<br>And through the palpable obscure find out<br>His uncouth way, or spread his aerie flight<br>Upborn with indefatigable wings<br>Over the vast abrupt, ere he arrive<br>",
-                  "As when of old some Orator renound <br>In Athens or free Rome, where Eloquence <br>Flourishd, since mute, to some great cause addrest,<br> Stood in himself collected, while each part, <br>Motion, each act won audience ere the tongue<br> Sometimes in highth began, as no delay <br>Of Preface brooking through his Zeal of Right.", " Nor dim nor red, like God's own head, <br>The glorious Sun uprist: <br>Then all averred, I had killed the bird<br>That brought the fog and mist. <br>Twas right, said they, such birds to slay, <br>That bring the fog and mist.", "So, now I have confess’d that he is thine,<br>And I myself am mortgaged to thy will,<br>Myself I’ll forfeit, so that other mine<br>Thou wilt restore, to be my comfort still:<br>But thou wilt not, nor he will not be free,<br>For thou art covetous and he is kind;<br>He learn’d but surety-like to write for me<br>Under that bond that him as fast doth bind."
+                  "As when of old some Orator renound <br>In Athens or free Rome, where Eloquence <br>Flourishd, since mute, to some great cause addrest,<br> Stood in himself collected, while each part, <br>Motion, each act won audience ere the tongue<br>", " Nor dim nor red, like God's own head, <br>The glorious Sun uprist: <br>Then all averred, I had killed the bird<br>That brought the fog and mist. <br>Twas right, said they, such birds to slay", "So, now I have confess’d that he is thine,<br>And I myself am mortgaged to thy will"
         ]
 
     },
     {
         "author": "Shakespeare",
         "poems": ["When my love swears that she is made of truth<br>I do believe her, though I know she lies,<br>That she might think me some untutor’d youth,<br>Unlearned in the world’s false subtleties.", "From you have I been absent in the spring,<br>When proud-pied April dress’d in all his trim<br>Hath put a spirit of youth in every thing,<br>That heavy Saturn laugh’d and leap’d with him.", "They were but sweet, but figures of delight,<br>Drawn after you, you pattern of all those.<br>Yet seem’d it winter still, and, you away,<br>As with your shadow I with these did play.", "Mine eye hath play’d the painter and hath stell’d<br>Thy beauty’s form in table of my heart;<br>My body is the frame wherein ’tis held,<br>And perspective it is the painter’s art."]
+    },
+
+    {
+        "author": "Modern",
+        "poems": ["Now hush, little baby, don't you cry<br>Everything's gonna be alright<br>Stiffen that upper lip up, little lady, I told ya<br>Daddy's here to hold ya through the night<br>I know Mommy's not here right now, and we don't know why<br>We fear how we feel inside", "It has to face the men of the time and to meet<br>The women of the time. It has to think about war   <brAnd it has to find what will suffice.<br> It has to construct a new stage. ", "At school, they instruct us to look up<br>and watch the Cuban-cursed sky.<br>Search for a streak of light.<br>Listen for a piercing shriek,<br>the whistle that will warn us<br>as poisonous A-bombs<br>zoom close.", "World is crazier and more of it than we think,<br>Incorrigibly plural. I peel and portion<br>A tangerine and spit the pips and feel<br>The drunkenness of things being various."]
+    },
+
+    {
+        "author": "Misc",
+        "poems": ["some say I'm now almost<br>extinct in this park<br>but the people who say this<br>don't know<br>that by smelling the orchids <br>they're sensing<br>the fragrance of my chops", "It is appropriate that I sing<br>The song of the feet<br>The weight of the body<br>And what the body chooses to bear<br>Fall on me", "I never thought I’d keep a record of my pain<br>or happiness<br>like candles lighting the entire soft lace<br>of the air", "Now I do <br>relive an evening of retreat<br>a bridge I left behind <br> where all the solid heat <br> of lust and tender trembling lay"]
     }
 
 ]
