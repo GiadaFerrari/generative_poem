@@ -34,15 +34,15 @@ function selectTemplate(template, userData) {
     clr = userData[2].substring(1, 7);
     bday = userData[3].substring(8, 10);
 
-    if (bday < 6) {
+    if (bday <= 5) {
         myTemplate = template[0]
 
-    } else if (5 < bday && bday < 10) {
+    } else if (5 < bday && bday <= 10) {
         myTemplate = template[1]
-    } else if (10 < bday && bday < 15) {
+    } else if (10 < bday && bday <= 15) {
         myTemplate = template[2]
 
-    } else if (15 < bday && bday < 20) {
+    } else if (15 < bday && bday <= 20) {
         myTemplate = template[3]
 
     } else if (bday > 20) {
