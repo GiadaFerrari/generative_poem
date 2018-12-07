@@ -7,9 +7,9 @@ let bday, clr, myTemplate, name, myP, n;
 let output = " ";
 let lexicon = new RiLexicon();
 let rhyme = [];
-
-
-
+let close = document.querySelector('.close');
+let title = document.querySelector('.title');
+let yourName = document.querySelector('.yourName');
 
 
 function processData() {
@@ -33,6 +33,8 @@ function selectTemplate(template, userData) {
     lname = userData[1]
     clr = userData[2].substring(1, 7);
     bday = userData[3].substring(8, 10);
+
+    yourName.textContent = " " + name + " " + lname;
 
     if (bday <= 5) {
         myTemplate = template[0]
@@ -67,11 +69,11 @@ function selectTemplate(template, userData) {
         n = lname
     }
     console.log(n)
-    applyRita(n);
+    applyRita(n, bday, myTemplate.title);
 
 };
 
-function applyRita(name) {
+function applyRita(name, bday, t) {
     let myIndex = (max) => {
         let min = 0;
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -81,11 +83,37 @@ function applyRita(name) {
     let rs = new RiString(myP);
     let rsWords = rs.words();
     let rsPos = rs.pos();
-    let newWord
-    console.log(rsPos);
-    console.log(rsWords);
+    let newWord;
 
+    let rt = new RiString(t);
+    let rtWords = rt.words();
+    let rtPos = rt.pos();
+
+    let newT;
     rhyme = lexicon.similarBySound(name);
+
+    console.log(rtWords)
+
+
+    if (rtWords.includes("Ode")) {
+        console.log("i man ode");
+
+
+        title.textContent = t + " " + rhyme[myIndex(rhyme.length - 1)];
+    } else if (rtWords.includes("Lost")) {
+        newT = rhyme[myIndex(rhyme.length - 1)];
+
+        title.textContent = newT + title;
+
+    } else if (rtWords.includes("Sonet")) {
+        title.textContent = title + bday;
+    } else if (rtWords.includes("Frozen")) {
+        title.textContent = lexicon.randomWord(rtPos[0]);
+    } else if (rtWords.includes("Crazy")) {
+        title.textContent = lexicon.randomWord(rtPos[0]) + " " + rhyme[myIndex(rhyme.length - 1)]
+    }
+
+
 
     for (i = 0; i < rsWords.length; i++) {
 
@@ -97,7 +125,7 @@ function applyRita(name) {
         } else if (rsWords[i] == '>') {
             output += '>'
         } else if (rsWords[i - 1] == "<") {
-            newWord = rhyme[myIndex(rhyme.length)]
+            newWord = rhyme[myIndex(rhyme.length - 1)]
 
             output += newWord;
             output += " ";
@@ -138,3 +166,6 @@ function showOutput() {
 
 
 submitButton.addEventListener('click', processData);
+close.addEventListener('click', () => {
+    modal.classList.toggle('hide')
+})

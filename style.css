@@ -58,6 +58,10 @@ button {
 
 /*modal*/
 
+.yourName {
+    text-transform: capitalize;
+}
+
 div.modal {
     width: 80vw;
     height: 80vh;
@@ -86,5 +90,6 @@ div.modal {
 
 .modal section {
     margin: 50px;
+    margin-top: 100px;
 
 }
